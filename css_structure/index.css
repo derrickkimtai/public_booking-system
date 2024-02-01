@@ -1,0 +1,154 @@
+/* Reset some default styles */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Navbar Styling */
+#navbar-container {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+/* Form Container Styling */
+.registration-container,
+.login-container,
+.route-container,
+.seat-container,
+.confirmation-container,
+.dashboard-container {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Slightly increased border radius */
+    border: 1px solid #ddd; /* Border for a clean separation from the background */
+}
+
+/* Optionally, you can add a gradient background for a more dynamic look */
+.registration-container,
+.login-container,
+.route-container,
+.seat-container,
+.confirmation-container,
+.dashboard-container {
+    background: linear-gradient(45deg, #f8f8f8, #e0e0e0);
+}
+
+/* Optionally, you can add a border to further distinguish the container */
+.registration-container,
+.login-container,
+.route-container,
+.seat-container,
+.confirmation-container,
+.dashboard-container {
+    border: 1px solid #ccc;
+}
+
+/* Optionally, you can add a subtle hover effect */
+.registration-container:hover,
+.login-container:hover,
+.route-container:hover,
+.seat-container:hover,
+.confirmation-container:hover,
+.dashboard-container:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Form Header Styling */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form Input Styling */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button Styling */
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Route List Styling */
+.route-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.select-route-btn {
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.select-route-btn:hover {
+    background-color: #555;
+}
+
+/* Seat Map Styling */
+#seat-map {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Booking Summary Styling */
+#booking-summary {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Cancel Booking Button Styling */
+.cancel-booking-btn {
+    background-color: #c0392b;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cancel-booking-btn:hover {
+    background-color: #e74c3c;
+}

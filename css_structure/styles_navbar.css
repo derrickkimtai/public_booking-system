@@ -36,7 +36,7 @@ a:hover {
     margin: 50px 0;
 }
 .content img {
-    max-width: 40%;
+    max-width: 60%;
     height: auto;
 }
 .content-text {
@@ -63,4 +63,10 @@ p {
         max-width: 100%;
         margin-left: 0;
     }
+}
+.info {
+    display: none;
+}
+.active {
+    display: block;
 }
