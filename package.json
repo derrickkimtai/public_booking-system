@@ -1,0 +1,24 @@
+{
+  "name": "public_booking-system-1",
+  "version": "1.0.0",
+  "description": "Public Transport Booking System - Frontend",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derrickkimtai/public_booking-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derrickkimtai/public_booking-system/issues"
+  },
+  "homepage": "https://github.com/derrickkimtai/public_booking-system#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
