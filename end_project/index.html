@@ -22,6 +22,12 @@
       background-color: #007bff;
       color: white;
     }
+    body {
+      background-image: url('/end_project/images/backgroubd.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
   </style>
 </head>
 <body>
@@ -50,11 +56,11 @@
 </nav>
 
 <div class="container mt-5">
-  <h1>Welcome to Mathree Seat Reservation</h1>
-  <p>Please enter your name, select your seat, and click "Reserve" to confirm your reservation:</p>
+  <h1 style="color: rgb(241, 236, 236);">Welcome to Mathree Seat Reservation</h1>
+  <p style="color: #f5f5f1;">Please enter your name, select your seat, and click "Reserve" to confirm your reservation:</p>
   <form id="reservation-form">
     <div class="form-group">
-      <label for="name">Name:</label>
+      <label for="name" style="color: #e9ecef;">Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
     </div>
     <div id="seat-map">
@@ -79,6 +85,33 @@
     <button type="submit" class="btn btn-primary mt-3">Reserve</button>
   </form>
 </div>
+<div id="about" class="section">
+  <div class="container">
+    <h2 style="color: #fff;">About Us</h2>
+    <p style="color: #f0f0f0;">Welcome to Mathree Seat Reservation, where your journey begins with the perfect seat! Say goodbye to the uncertainties of seat availability and embrace a hassle-free experience. Whether you're commuting daily or planning a special trip, our advanced seat reservation system ensures you always have the seat you desire.
+
+      Navigate our user-friendly platform with ease and secure your spot in just a few clicks. No more stress about crowded rides or last-minute adjustments—Mathree Seat Reservation puts you in control of your travel experience.
+      
+      Make every journey comfortable, convenient, and customized to your preferences. Join us at Mathree Seat Reservation and let's redefine how you travel, one reserved seat at a time</p>
+  </div>
+</div>
+
+<div id="services" class="section">
+  <div class="container">
+    <h2 style="color: #fff;">Our Services</h2>
+    <p style="color: #f0f0f0;">Effortless Seat Booking: Our user-friendly interface allows you to seamlessly browse and book your preferred seats for every journey.</p>
+    <!-- Add similar styling for other service descriptions -->
+  </div>
+</div>
+
+<div id="contact" class="section">
+  <div class="container">
+    <h2 style="color: #fff;">Contact Us</h2>
+    <p style="color: #f0f0f0;">+254 21170527</p>
+    <p style="color: #f0f0f0;">mathree@gmail.com</p>
+  </div>
+</div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
