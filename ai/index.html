@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathree Seat Reservation</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar {
+      background-color: #f8f9fa;
+    }
+    .seat {
+      width: 50px;
+      height: 50px;
+      background-color: #e9ecef;
+      border: 1px solid #ced4da;
+      margin: 5px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .seat.selected {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Mathree Seat Reservation</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h1>Welcome to Mathree Seat Reservation</h1>
+  <p>Please enter your name, select your seat, and click "Reserve" to confirm your reservation:</p>
+  <form id="reservation-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+    </div>
+    <div id="seat-map">
+      <div class="seat">1</div>
+      <div class="seat">2</div>
+      <div class="seat">3</div>
+      <div class="seat">4</div>
+      <div class="seat">5</div>
+      <div class="seat">6</div>
+      <div class="seat">7</div>
+      <div class="seat">8</div>
+      <div class="seat">9</div>
+      <div class="seat">10</div>
+      <div class="seat">11</div>
+      <div class="seat">12</div>
+      <div class="seat">13</div>
+      <div class="seat">14</div>
+
+      <!-- Add more seat divs as needed -->
+    </div>
+    <div id="selected-seats"></div>
+    <button type="submit" class="btn btn-primary mt-3">Reserve</button>
+  </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="confirmationText"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var selectedSeats = [];
+
+    $('.seat').click(function() {
+      $(this).toggleClass('selected');
+      var seatNumber = $(this).text();
+      var index = selectedSeats.indexOf(seatNumber);
+      if (index === -1) {
+        selectedSeats.push(seatNumber);
+      } else {
+        selectedSeats.splice(index, 1);
+      }
+      $('#selected-seats').text('Selected Seats: ' + selectedSeats.join(', '));
+    });
+
+    $('#reservation-form').submit(function(event) {
+      event.preventDefault();
+      var name = $('#name').val();
+      if (selectedSeats.length > 0 && name !== "") {
+        var confirmationMessage = 'Reservation confirmed for ' + name + ' for seat(s): ' + selectedSeats.join(', ');
+        $('#confirmationText').text(confirmationMessage);
+        $('#confirmationModal').modal('show');
+      } else {
+        alert('Please select at least one seat and enter your name to confirm the reservation.');
+      }
+    });
+  });
+</script>
+</body>
+</html>
