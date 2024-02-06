@@ -166,5 +166,20 @@
     });
   });
 </script>
+<script>
+  // Example of making a GET request to a Flask API endpoint
+  fetch('https://your-flask-api.com/data')
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response from the Flask API
+      console.log(data);
+      // Update the HTML content with the data received from the API
+      // For example, you can update a specific element with the received data
+      document.getElementById('some-element').innerHTML = data.someProperty;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+</script>
 </body>
 </html>
